@@ -13,11 +13,13 @@ Get the list of todo items.
 ```json
 [
     {
-        "todoId": 12,
-        "task": "Hello",
-        "description": "Desc",
-        "date": "2017-12-23T13:07:31.85",
-        "done": false
+
+        "TodoId": 12,
+        "Task": "Hello",
+        "Description": "Desc",
+        "Date": "2017-12-23T13:07:31.85",
+        "Done": false
+
     }
 ]
 ```

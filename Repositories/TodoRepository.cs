@@ -67,6 +67,18 @@ namespace FantaCode.Todoapi.Repositories
             }
         }
 
+        public void Done(Todo item1)
+        {
+            using (System.Data.IDbConnection dbConnection = GetConnection())
+            {
+                string sQuery = "UPDATE Todo SET "
+                                + " Done = @Done "
+                               + " WHERE Todoid = @Todoid";
+                dbConnection.Open();
+                dbConnection.Query(sQuery, item1);
+            }
+        }
+
         public void Delete(Todo item1)
         {
             using (System.Data.IDbConnection dbConnection = GetConnection())
