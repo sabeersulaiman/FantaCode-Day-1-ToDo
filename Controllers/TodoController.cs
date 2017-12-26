@@ -59,5 +59,11 @@ namespace FantaCode.Todoapi
             if (ModelState.IsValid)
                 todoRepository.Delete(todo);
         }
+
+        [HttpGet("done/{id}")]
+        public void Done(int id)
+        {
+            todoRepository.Done(id);
+        }
     }
 }

@@ -10,9 +10,10 @@ namespace FantaCode.Todoapi.Repositories
     {
 
         private string connectionString;
+        private string possible;
         public TodoRepository()
         {
-            connectionString = @"Server=localhost;Database=FcdOne;Trusted_Connection=true;";
+            connectionString = @"Data Source=tcp:todointern.database.windows.net,1433;Initial Catalog=Fcdone;User Id=sabeersulaimanpv@todointern.database.windows.net;Password=Mic#128$AbEeR;";
         }
 
         public IDbConnection GetConnection()
@@ -73,6 +74,16 @@ namespace FantaCode.Todoapi.Repositories
                 string sQuery = "delete from Todo WHERE Todoid = @Todoid";
                 dbConnection.Open();
                 dbConnection.Query(sQuery, item1);
+            }
+        }
+
+        public void Done(int id)
+        {
+            using (System.Data.IDbConnection dbConnection = GetConnection())
+            {
+                string sQuery = "UPDATE Todo SET Done = 1 WHERE Todoid = @Todoid";
+                dbConnection.Open();
+                dbConnection.Query(sQuery, new {Todoid = id});
             }
         }
     }
