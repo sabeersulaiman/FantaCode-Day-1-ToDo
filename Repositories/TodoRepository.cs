@@ -10,7 +10,7 @@ namespace FantaCode.Todoapi.Repositories
     {
 
         private string connectionString;
-        private string possible;
+
         public TodoRepository()
         {
             connectionString = @"Data Source=tcp:todointern.database.windows.net,1433;Initial Catalog=Fcdone;User Id=sabeersulaimanpv@todointern.database.windows.net;Password=Mic#128$AbEeR;";

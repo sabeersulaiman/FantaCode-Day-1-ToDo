@@ -2,6 +2,8 @@
 
 This is the API for Todo App.
 
+**BASE URL**: https://todointern.azurewebsites.net/
+
 
 ### 1. api/Todo (GET)
 
